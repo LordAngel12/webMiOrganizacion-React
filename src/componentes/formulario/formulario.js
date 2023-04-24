@@ -10,6 +10,8 @@ const Formulario = (props) => {
   const [foto, actualizarFoto] = useState("");
   const [equipo, actualizarEquipo] = useState("");
 
+  const { registrarColaborador } = props
+ 
   const manejarEnvio = (e) => {
     e.preventDefault();
     console.log("Manjenar Envio");
@@ -20,6 +22,8 @@ const Formulario = (props) => {
       foto: foto,
       equipo: equipo,
     };
+
+    registrarColaborador(datosAenviar);
 
     console.log(datosAenviar);
   };
@@ -48,10 +52,11 @@ const Formulario = (props) => {
           valor={foto}
           actualizarValor={actualizarFoto}
         />
-        <ListaOpciones 
+        <ListaOpciones
           valor={equipo}
           actualizarEquipo={actualizarEquipo}
-          equipos ={props.equipos}/>
+          equipos={props.equipos}
+        />
         <Boton texto="Crear" />
       </form>
     </section>

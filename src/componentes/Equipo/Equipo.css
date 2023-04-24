@@ -12,5 +12,10 @@
     color: #212121;
     border-bottom: 4px solid #57C278 ;
     padding-bottom: 8px;
+}
 
+.Colaboradores{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }

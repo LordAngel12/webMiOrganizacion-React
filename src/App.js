@@ -5,12 +5,21 @@ import Formulario from "./componentes/Formulario/Formulario";
 import MiOrg from "./componentes/MiOrg";
 import Equipo from "./componentes/Equipo";
 
+
 function App() {
   const [mostrarFormulario, actualizarMostrar] = useState(false);
 
   const cambiarMostrar = () => {
     actualizarMostrar(!mostrarFormulario);
   };
+
+  //Registro Colaborador //
+
+  const registrarColaborador = (colaborador) => {
+    console.log("Nuevo colaborador", colaborador);
+  };
+
+  //Lista de Equipos //
 
   const equipos = [
     {
@@ -54,7 +63,14 @@ function App() {
   return (
     <div>
       <Header />
-      {mostrarFormulario === true ? <Formulario  equipos={equipos.map((equipo) => equipo.titulo )}/> : <div></div>}
+      {mostrarFormulario === true ? (
+        <Formulario
+          equipos={equipos.map((equipo) => equipo.titulo)}
+          registrarColaborador={registrarColaborador}
+        />
+      ) : (
+        <div></div>
+      )}
       <MiOrg cambiarMostrar={cambiarMostrar} />
       {equipos.map((equipo) => {
         console.log("Equipo :", equipo);
