@@ -14,7 +14,7 @@
     padding-bottom: 8px;
 }
 
-.Colaboradores{
+.colaboradores{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;

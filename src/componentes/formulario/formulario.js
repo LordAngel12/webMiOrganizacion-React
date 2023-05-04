@@ -15,17 +15,16 @@ const Formulario = (props) => {
   const manejarEnvio = (e) => {
     e.preventDefault();
     console.log("Manjenar Envio");
-
-    let datosAenviar = {
-      nombre: nombre,
-      puesto: puesto,
-      foto: foto,
-      equipo: equipo,
+    
+    let datosAEnviar = {
+      nombre,
+      puesto,
+      foto,
+      equipo,
     };
 
-    registrarColaborador(datosAenviar);
+   registrarColaborador(datosAEnviar);
 
-    console.log(datosAenviar);
   };
   return (
     <section className="formulario">
