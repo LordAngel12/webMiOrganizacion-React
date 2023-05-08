@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Formulario.css";
+import "./Formularios.css"
 import Campo from "../Campo";
 import ListaOpciones from "../ListaOpciones/ListaOpciones";
 import Boton from "../Boton/Boton";
