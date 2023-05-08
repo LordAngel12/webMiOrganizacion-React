@@ -7,7 +7,6 @@ import MiOrg from "./componentes/MiOrg";
 import Equipo from "./componentes/Equipo";
 import Footer from "./componentes/Footer";
 
-
 function App() {
   const [mostrarFormulario, actualizarMostrar] = useState(false);
   const [colaboradores, actualizarColaboradores] = useState([
@@ -148,10 +147,10 @@ function App() {
       if (colaborador.id === id) {
         colaborador.fav = !colaborador.fav;
       }
-      return colaborador
+      return colaborador;
     });
 
-    actualizarColaboradores(colaboradoresActualizados)
+    actualizarColaboradores(colaboradoresActualizados);
   };
 
   return (

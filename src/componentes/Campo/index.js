@@ -5,7 +5,7 @@ const Campo = (props) => {
 
   //Destructuracion
 
-  const { type = "text" } = props
+  const { type = "text" } = props;
 
   const manejarCambio = (e) => {
     props.actualizarValor(e.target.value);

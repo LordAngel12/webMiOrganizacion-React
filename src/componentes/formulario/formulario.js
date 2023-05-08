@@ -13,7 +13,7 @@ const Formulario = (props) => {
   const [titulo, actualizarTitulo] = useState("");
   const [color, actualizarColor] = useState("");
 
-  const { registrarColaborador , crearEquipo } = props;
+  const { registrarColaborador, crearEquipo } = props;
 
   const manejarEnvio = (e) => {
     e.preventDefault();
@@ -29,10 +29,10 @@ const Formulario = (props) => {
     registrarColaborador(datosAEnviar);
   };
 
-  const manejarNuevoEquipo =(e) =>{
-  e.preventDefault()
-  crearEquipo({titulo ,colorPrimario:color});
-  }
+  const manejarNuevoEquipo = (e) => {
+    e.preventDefault();
+    crearEquipo({ titulo, colorPrimario: color });
+  };
 
   return (
     <section className="formulario">
@@ -81,7 +81,7 @@ const Formulario = (props) => {
           required
           valor={color}
           actualizarValor={actualizarColor}
-          type ="color"
+          type="color"
         />
         <Boton texto="Registrar" />
       </form>
